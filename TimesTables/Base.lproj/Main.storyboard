@@ -36,11 +36,14 @@
                                     <outlet property="delegate" destination="vXZ-lx-hvc" id="LU7-Nb-a8p"/>
                                 </connections>
                             </tableView>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="xbB-qL-gZo">
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="5" minValue="0.0" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="xbB-qL-gZo">
                                 <rect key="frame" x="14" y="28" width="292" height="31"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="288" id="7qz-eg-SCF"/>
                                 </constraints>
+                                <connections>
+                                    <action selector="updateSlider:" destination="vXZ-lx-hvc" eventType="valueChanged" id="nnW-9Y-2Ua"/>
+                                </connections>
                             </slider>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -73,6 +76,10 @@
                         </variation>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="slider" destination="xbB-qL-gZo" id="fK2-S6-oiK"/>
+                        <outlet property="theTable" destination="MC4-u6-n8Z" id="Cym-aA-OXX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
